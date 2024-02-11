@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text Code    </title>
+        <link rel="stylesheet" type="text/css" href="./bin/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="./bin/css/header.css">
+    </head>
+    <body>
+        <header>
+            <a class="header-title" href="index.html">
+                <img src="./icon.png" alt="" width="48" height="48">
+            </a>
+            <ul class="header-list">
+                <li class="header-item">
+                    <a href="documentation.html">Docs</a>
+                </li>
+                <li class="header-item">
+                    <a href="documentation.html">About</a>
+                </li>
+            </ul>
+        </header>
+        <main>
+            <div class="page-wrapper">
+                <div class="page-row">
+                    <h1>Input</h1>
+                    <button class="btn btn-primary" id="run">Execute</button>
+                </div>
+                <div id="input" contenteditable="true"></div>
+                <div class="page-row">
+                    <h1>Output</h1>
+                    <button class="btn btn-secondary" id="clear">Clear</button>
+                </div>
+                <div id="output"></div>
+            </div>
+        </main>
+        <script src="./bin/js/main.js" defer></script>
+    </body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text Code</title>
+        <link rel="stylesheet" type="text/css" href="./bin/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="./bin/css/header.css">
+        <link rel="stylesheet" type="text/css" href="./bin/css/documentation.css">
+    </head>
+    <body style="max-height: 100vh; overflow: hidden;">
+        <header>
+            <a class="header-title" href="index.html">
+                <img src="./icon.png" alt="" width="48" height="48">
+            </a>
+            <ul class="header-list">
+                <li class="header-item">
+                    <a href="documentation.html">Docs</a>
+                </li>
+                <li class="header-item">
+                    <a href="documentation.html">About</a>
+                </li>
+            </ul>
+        </header>
+        <main>
+            <div class="doc-wrapper" style="height: calc(100vh - 88px); overflow: auto; scroll-behavior: smooth;">
+                <h1 class="doc-title">Overview</h1>
+                <h2 class="doc-sub-title">About</h2>
+                <p class="doc-p">
+                    Text code is a simple project that i created to make writing basic 
+                    code as easy/readable as possible.
+                </p>
+                <h2 class="doc-sub-title">How it works</h2>
+                <p class="doc-p">
+                    Text Code uses <a class="styled-link" href="#keywords">keywords</a> to easily generate code at runtime,
+                    every keyword is <a class="styled-link" target="_blank" href="https://en.wiktionary.org/wiki/case_insensitive">case-insensitive</a>, and every
+                    word seperated by spaces that isnt a valid keyword will be treated as <a class="styled-link" href="#variables">variables</a>.
+                </p>
+                <hr class="doc-line">
+                <!-- keywords -->
+                <h1 id="keywords" class="doc-title">Keywords</h1>
+                <p class="doc-p">
+                    Keywords are very important for Text Code, they tell the 
+                    compiler what to do with the input text.
+                </p>
+                <p class="doc-p">See a list of all keywords below.</p>
+                <p class="doc-p">
+                    <a class="styled-link" href="#add">Add</a>, <a class="styled-link" href="#subtract">Subtract</a>, 
+                    <a class="styled-link" href="#divide">Divide</a>, <a class="styled-link" href="#multiply">Multiply</a>, 
+                    <a class="styled-link" href="#from">From</a>, <a class="styled-link" href="#to">To</a>, 
+                    <a class="styled-link" href="#is">Is</a>, <a class="styled-link" href="#are">Are</a>
+                </p>
+                <hr class="doc-line">
+                <!-- variables -->
+                <h1 id="variables" class="doc-title">Variables</h1>
+                <p class="doc-p">
+                    In Text Code every things that isnt a reserved keyword is automatically treated as a variable.
+                </p>
+                <h3 class="doc-sub-sub-title">Example:</h3>
+                <p class="doc-p">See <a class="styled-link" href="#define-vars">defining variables</a> for info on how to do so</p>
+                <code class="doc-code">
+                    x is 3;
+                    add
+                    <br>
+                    hi
+                </code>
+                <span class="code-output">4</span>
+                <!-- defining variables -->
+                <h2 class="doc-sub-title" id="define-vars">Defining Variables</h2>
+                <p class="doc-p">
+                    Defining variables in Text Code is very easy, simply write 
+                    the name you want your variable to be called and use the <a class="styled-link" href="#is">is</a> 
+                    keyword to assign a value to it.
+                </p>
+                <h3 class="doc-sub-sub-title">Examples:</h3>
+                <h2 class="doc-sub-sub-title">Assign a number to a variable</h2>
+                <code class="doc-code">
+                    x is 10;
+                    <br>    
+                    y is 5;
+                    <br>
+                    x subtract y
+                </code>
+                <span class="code-output">5</span>
+                <h2 class="doc-sub-sub-title">Assign text to a variable</h2>
+                <code class="doc-code">
+                    hi is "Hello";
+                    <br>
+                    name is " User";
+                    <br>
+                    hi name
+                </code>
+                <span class="code-output">Hello User</span>
+                <!-- <s style="text-decoration: line-through;">
+                    <p class="doc-p">
+                        You can also define text without the ("") symbol but it can 
+                        only be done if there is only letters in the text so it is highly not recommended
+                    </p>
+                    <code class="doc-code">
+                        hi is Hello;
+                        <br>
+                        name is&nbsp;&nbsp;User;
+                        <br>
+                        hi name
+                    </code>
+                    <span class="code-output">Hello User</span>
+                    <p class="doc-p">
+                        This is also a lot less readable... as you can see i had to have the first space 
+                        between <a class="styled-link" href="#it">it</a> and the text and i had to have 
+                        another space for the space in the final output.
+                    </p>
+                </s> -->
+                <h2 class="doc-sub-sub-title">Assign a <a class="styled-link" href="#list">list</a> to a variable</h2>
+                <p class="doc-p">You can use is and are interchangeably its only purpose is for readability, they both do the same thing.</p>
+                <p class="doc-p">also note that the spaces in between list value assignment do not matter.</p>
+                <code class="doc-code">
+                    numbers are 3, 5, 6
+                    <br>
+                    letters are "a","b","c"
+                    <br>
+                    numbers 
+                    <br>
+                    letters
+                </code>
+                <span class="code-output">
+                    356
+                    <br>
+                    abc
+                </span>
+                <hr class="doc-line">
+                <!-- math -->
+                <h1 class="doc-title">Math</h1>
+                <p class="doc-p">Text code makes it very easy to do complex math simply by telling it what to do in english.</p>
+                <!-- add -->
+                <h2 class="doc-sub-title" id="add">Add</h2>
+                <p class="doc-p">The add keyword simply works how anyone would expect, you can put it in between to numbers, or in front of the sequence of numbers you want to add.</p>
+                <h3 class="doc-sub-sub-title">Examples:</h3>
+                <code class="doc-code">add 1, 3</code>
+                <span class="code-output">4</span>
+                <code class="doc-code">1 add 3</code>
+                <span class="code-output">4</span>
+                <p class="doc-p">the add keyword can also be used by the + symbol in the same places.</p>
+                <!-- subtract -->
+                <h2 class="doc-sub-title" id="subtract">Subtract</h2>
+                <p class="doc-p">The subtract keyword simply works how anyone would expect, you can put it in between to numbers, or in front of the sequence of numbers you want to subtract.</p>
+                <h3 class="doc-sub-sub-title">Examples:</h3>
+                <code class="doc-code">subtract 10, 8</code>
+                <span class="code-output">2</span>
+                <code class="doc-code">22 subtract 3</code>
+                <span class="code-output">19</span>
+                <p class="doc-p">the subtract keyword can also be used by the - symbol in the same places</p>
+                <!-- divide -->
+                <h2 class="doc-sub-title" id="divide">Divide</h2>
+                <p class="doc-p">The divide keyword simply works how anyone would expect, you can put it in between to numbers, or in front of the sequence of numbers you want to divide.</p>
+                <h3 class="doc-sub-sub-title">Examples:</h3>
+                <code class="doc-code">divide 20, 2</code>
+                <span class="code-output">10</span>
+                <code class="doc-code">69 divide 3</code>
+                <span class="code-output">23</span>
+                <p class="doc-p">the divide keyword can also be used by the / symbol in the same places</p>
+                <!-- multiply -->
+                <h2 class="doc-sub-title" id="multiply">Multiply</h2>
+                <p class="doc-p">The multiply keyword simply works how anyone would expect, you can put it in between to numbers, or in front of the sequence of numbers you want to multiply.</p>
+                <h3 class="doc-sub-sub-title">Examples:</h3>
+                <code class="doc-code">multiply 10, 8</code>
+                <span class="code-output">80</span>
+                <code class="doc-code">5 multiply 3</code>
+                <span class="code-output">15</span>
+                <p class="doc-p">the multiply keyword can also be used by the * symbol in the same places</p>
+            </div>
+        </main>
+    </body>
+</html>
